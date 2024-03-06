@@ -1,19 +1,22 @@
 # -*- coding: utf-8 -*-
-# Crear una lista vacía para almacenar los números
-numeros = []
+# This program asks the user to input 5 integers and stores them in a list. It calculates the total sum of these numbers
+# and then prints the sum. Additionally, it prints out numbers from the list that are greater than 10.
 
-# Pedir al usuario que ingrese 5 números enteros
+# Create an empty list to store the numbers
+numbers = []
+
+# Ask the user to enter 5 integers
 for i in range(5):
-    numero = int(input("Ingresa número:"))
-#    numero = int(2)
-    numeros.append(numero)
+    number = int(input("Enter a number:"))
+    numbers.append(number)
 
-# Calcular la suma de los números
-suma_total = sum(numeros)
-print(f"La suma total de los números es: {suma_total}")
+# Calculate the total sum of the numbers
+total_sum = sum(numbers)
+print(f"The total sum of the numbers is: {total_sum}")
 
-# Imprimir números mayores que 10
-print("Números mayores que 10:")
-for numero in numeros:
-    if numero > 10:
-        print(numero)
+# Print numbers greater than 10
+print("Numbers greater than 10:")
+for number in numbers:
+    if number > 10:
+        print(number)
+
