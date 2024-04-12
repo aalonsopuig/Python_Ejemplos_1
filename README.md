@@ -45,3 +45,22 @@ It allows the user to input a temperature and choose whether they want to conver
 or from Fahrenheit to Celsius. The program defines two functions, one for each conversion direction, and uses
 conditional logic to execute the appropriate conversion based on user input. It showcases fundamental programming
 concepts such as function definition, arithmetic operations, conditional statements, and user input handling.
+
+- **j_Lista_de_la_compra**
+This program allows the user to create and manage a shopping list interactively.
+The user can add items to the shopping list by entering the names of the items one by one.
+To finish and see all the items added to the list, the user must enter '0'.
+The program then displays the complete shopping list before ending its execution.
+It is a simple but practical tool for keeping track of pending purchases.
+
+![image](https://github.com/aalonsopuig/Python_Ejemplos_1/assets/57196844/be8411c8-1dd7-4942-9924-f74c14572d4b)
+
+
+- **k_calculadora_simple.py**
+This program simulates a calculator that can perform basic arithmetic operations in sequence.
+The user enters a number, selects an arithmetic operation (+, -, /, x), and enters another number.
+The calculator executes the operation and waits for the next user input.
+This process is repeated until the user enters '=' to display the result and end the program.
+
+![image](https://github.com/aalonsopuig/Python_Ejemplos_1/assets/57196844/8d9ad335-b356-4547-af34-bf6909459a21)
+
