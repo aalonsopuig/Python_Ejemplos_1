@@ -1,42 +1,41 @@
-# Programa Calculadora Secuencial Interactiva
+# Sequential Interactive Calculator
 
-# Este programa simula una calculadora que puede realizar operaciones aritméticas básicas de manera secuencial.
-# El usuario introduce un número, selecciona una operación aritmética (+, -, /, x), e introduce otro número.
-# La calculadora ejecuta la operación y espera la siguiente entrada del usuario.
-# Este proceso se repite hasta que el usuario introduce '=' para mostrar el resultado y terminar el programa.
+# This program simulates a calculator that can perform basic arithmetic operations sequentially.
+# The user enters a number, selects an arithmetic operation (+, -, /, x), and enters another number.
+# The calculator performs the operation and waits for the next user input.
+# This process repeats until the user enters '=' to display the result and end the program.
 
-# Solicita al usuario el primer número
-print("Calculadora Secuencial Interactiva")
-resultado = float(input("Introduce el primer número: "))
+# Ask the user for the first number
+print("Sequential Interactive Calculator")
+result = float(input("Enter the first number: "))                       # Reads the first number and converts it to float
 
-# Inicia un bucle para solicitar operaciones y números adicionales
+# Start a loop to request additional operations and numbers
 while True:
-    # Solicita al usuario la operación a realizar
-    operacion = input("Introduce la operación (+, -, /, x, =): ")
-    
-    # Verifica si el usuario desea terminar y mostrar el resultado
-    if operacion == "=":
-        print("El resultado es:", resultado)
-        break  # Termina el bucle y finaliza el programa
-    
-    # Solicita al usuario el siguiente número
-    numero = float(input("Introduce el siguiente número: "))
-    
-    # Utiliza match para determinar la operación a realizar
-    match operacion:
-        case '+':
-            resultado += numero
-        case '-':
-            resultado -= numero
-        case '/':
-            if numero != 0:  # Evita la división por cero
-                resultado /= numero
-            else:
-                print("Error: División por cero. Por favor, intenta nuevamente.")
-                continue  # Permite al usuario corregir su entrada sin terminar el programa
-        case 'x':
-            resultado *= numero
-        case _:  # Captura cualquier entrada que no sea una operación válida
-            print("Operación no válida. Por favor, intenta nuevamente.")
+    # Ask the user for the operation to be performed
+    operation = input("Enter the operation (+, -, /, x, =): ")          # Reads the operation
 
-# Nota: Este programa no maneja errores de entrada no numérica. Se asume que el usuario introduce números válidos.
+    # Check if the user wants to end and show the result
+    if operation == "=":
+        print("The result is:", result)                                 # Displays the final result
+        break                                                           # Ends the loop and exits the program
+
+    # Ask the user for the next number
+    number = float(input("Enter the next number: "))                    # Reads the next number and converts it to float
+
+    # Use match to determine the operation to be performed
+    if operation == "+":
+        result += number                                                # Adds the number to the result
+    elif operation == "-":
+        result -= number                                                # Subtracts the number from the result
+    elif operation == "/":
+        if number != 0:                                                 # Prevents division by zero
+            result /= number
+        else:
+            print("Error: Division by zero. Please try again.")         # Error message for division by zero
+            continue                                                    # Allows the user to correct their input without ending the program
+    elif operation == "x":
+        result *= number                                                # Multiplies the result by the number
+    else:  # Captures any input that is not a valid operation
+        print("Invalid operation. Please try again.")                   # Error message for invalid operation
+
+# Note: This program does not handle errors for non-numeric input. It is assumed that the user inputs valid numbers.
